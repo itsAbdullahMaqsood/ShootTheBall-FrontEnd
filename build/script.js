@@ -194,8 +194,8 @@ gsap.to(".rev-img1", {
   left: 50,
   duration: 1,
   scrollTrigger:{
-    start: '70% 50%',
-    end: '70% 30%',
+    start: '50% 60%',
+    end: '50% 40%',
     trigger: ".reviews-container",
     scroller: "body",
     scrub: 2
@@ -206,8 +206,8 @@ gsap.to(".rev-img2", {
   right: 50,
   duration: 1,
   scrollTrigger:{
-    start: '70% 50%',
-    end: '70% 30%',
+    start: '50% 60%',
+    end: '50% 40%',
     trigger: ".reviews-container",
     scroller: "body",
     scrub: 2
@@ -218,8 +218,8 @@ gsap.to(".cta-h1", {
   top: '0',
   duration: 1,
   scrollTrigger:{
-    start: '-15% 50%',
-    end: '-15% 48%',
+    start: '-53% 60%',
+    end: '-53% 58%',
     trigger: ".cta",
     scroller: "body",
     markers: true,
