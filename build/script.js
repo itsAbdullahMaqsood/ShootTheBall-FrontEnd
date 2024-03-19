@@ -222,7 +222,6 @@ gsap.to(".cta-h1", {
     end: '-53% 58%',
     trigger: ".cta",
     scroller: "body",
-    markers: true,
     scrub: 0.5
   }
 });
