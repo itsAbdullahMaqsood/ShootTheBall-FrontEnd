@@ -210,7 +210,6 @@ gsap.to(".rev-img2", {
     end: '70% 30%',
     trigger: ".reviews-container",
     scroller: "body",
-    markers:true,
     scrub: 2
   }
 });
