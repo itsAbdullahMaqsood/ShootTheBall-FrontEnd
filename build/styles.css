@@ -1021,6 +1021,7 @@ footer{
     width: 25px;
     height: 25px;
     transition: all 0.2s;
+    z-index: 0;
 }
 
 .social-icons:hover{
