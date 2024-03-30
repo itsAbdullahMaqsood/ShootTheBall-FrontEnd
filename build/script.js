@@ -155,7 +155,7 @@ gsap.to(CSSRulePlugin.getRule(".background-video::after"), {
 // });
 
 gsap.to(".logo", {
-  margin: '5px 0',
+  margin: '10px 0',
   duration: 5,
   scrollTrigger:{
     start: 'top -10%',
@@ -166,7 +166,7 @@ gsap.to(".logo", {
   }
 });
 
-gsap.to(".nav-grid", {
+gsap.to(".nav-flex", {
   backgroundColor: "black",
   duration: 5,
   scrollTrigger:{
@@ -191,11 +191,11 @@ gsap.to(".logo svg", {
 });
 
 gsap.to(".rev-img1", {
-  left: 50,
-  duration: 1,
+  left: 25,
+  duration: 0.6,
   scrollTrigger:{
-    start: '50% 60%',
-    end: '50% 40%',
+    start: '-70% 60%',
+    end: '-70% 40%',
     trigger: ".reviews-container",
     scroller: "body",
     scrub: 2
@@ -203,11 +203,11 @@ gsap.to(".rev-img1", {
 });
 
 gsap.to(".rev-img2", {
-  right: 50,
+  right: 30,
   duration: 1,
   scrollTrigger:{
-    start: '50% 60%',
-    end: '50% 40%',
+    start: '-70% 60%',
+    end: '-70% 40%',
     trigger: ".reviews-container",
     scroller: "body",
     scrub: 2
@@ -215,11 +215,11 @@ gsap.to(".rev-img2", {
 });
 
 gsap.to(".cta-h1", {
-  top: '0',
+  top: '-45px',
   duration: 1,
   scrollTrigger:{
-    start: '-53% 60%',
-    end: '-53% 58%',
+    start: '-63% 60%',
+    end: '-63% 58%',
     trigger: ".cta",
     scroller: "body",
     scrub: 0.5
