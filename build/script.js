@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+ 
  var swiper = new Swiper(".carousel .mySwiper", {
     spaceBetween: 30,
     effect: "fade",
@@ -48,13 +50,43 @@
   let dotcenterX = dotBounds.width/2;
   let dotcenterY = dotBounds.height/2;
 
+  let bodyWidth = parseInt(getComputedStyle(body).width);
+
   window.addEventListener("mousemove", (details) => {
+    bodyWidth = parseInt(getComputedStyle(body).width)
+    if(bodyWidth > 1090){
     glow.style.left = ((details.clientX)-glowcenterX)+"px";
     glow.style.top = ((details.clientY)-glowcenterY)+"px";
 
     dot.style.left = ((details.clientX)-dotcenterX)+"px";
     dot.style.top = ((details.clientY)-dotcenterY)+"px";
+    }
+    else{
+    glow.style.left = '0px';
+    glow.style.top = "0px";
 
+    dot.style.left = "-20px";
+    }
+  })
+
+  let menuIcon = document.querySelector(".menu-icon");
+  let menuIconImgOpen = document.querySelector(".menu-icon img:nth-child(1)");
+  let menuIconImgClose = document.querySelector(".menu-icon img:nth-child(2)");
+  let menu = document.querySelector(".menu");
+  
+  menuIcon.addEventListener('click', (details) => {
+    if(menu.style.display === 'none'){
+      menu.style.display = 'grid';
+      menu.style.opacity = "1";
+      menuIconImgClose.style.display = "block";
+      menuIconImgOpen.style.display = "none";
+    }
+    else{
+      menu.style.display = 'none';
+      menu.style.opacity = "0";
+      menuIconImgClose.style.display = "none";
+      menuIconImgOpen.style.display = "block";
+    }
   })
 
   const button1 = document.querySelector(".button1");
@@ -85,7 +117,7 @@
   const copywriteLink1 = document.querySelector('.copywrite-links span:nth-child(1)');
   const copywriteLink2 = document.querySelector('.copywrite-links span:nth-child(2)');
   const copywriteLink3 = document.querySelector('.copywrite-links span:nth-child(3)');
-  const copywriteLink4 = document.querySelector('.grid-bottom .Watermark');
+  const copywriteLink4 = document.querySelector('.footer-bottom .Watermark');
   const hoveritems =  [button2, button1, button3, linkitems1, linkitems2, linkitems3, linkitems4, linkitems5, arrow, cardd1, cardd2, cardd3, ctaButton1, ctaButton2, ctaButton3, socialIcons1, socialIcons2, footerlink1, footerlink2, footerlink3, footerlink4, footerlink5, footerlink6, address, direction, copywriteLink1, copywriteLink2, copywriteLink3, copywriteLink4];
   const green = '#85c52c';
   
@@ -108,7 +140,7 @@
 }); 
 
 const logoSVG = document.querySelector(".logo svg");
-const navGrid = document.querySelector(".nav-grid");
+const navflex = document.querySelector(".nav-flex");
 const linkItems = [linkitems1, linkitems2, linkitems3, linkitems4, linkitems5];
 
 linkItems.forEach(Item => { 
@@ -132,10 +164,12 @@ linkItems.forEach(Item => {
   })
 });
 
-gsap.to(CSSRulePlugin.getRule(".background-video::after"), {
-  backgroundImage:  'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 1)',
+let videoHTML = document.querySelector(".background-video");
+
+gsap.to((".background-video-overlay"), {
+  backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 1)',
   scrollTrigger:{
-    trigger: ".background-video::after",
+    trigger: ".background-video-overlay",
     scroller: "body",
     start: 'top -10%',
     end: "top -90%",
@@ -143,47 +177,84 @@ gsap.to(CSSRulePlugin.getRule(".background-video::after"), {
   }
 });
 
-// gsap.to(".background-video video", {
-//   transform: 'scale(110%)',
-//   scrollTrigger:{
-//     trigger: ".background-video",
-//     scroller: "body",
-//     start: "top -10%",
-//     end: "top -60%",
-//     scrub: 2
-//   }
-// });
+if( bodyWidth<=560 ){
 
-gsap.to(".logo", {
-  margin: '10px 0',
-  duration: 5,
-  scrollTrigger:{
-    start: 'top -10%',
-    end: 'top -12%',
-    trigger: ".logo",
-    scroller: "body",
-    scrub: 0.5
-  }
-});
+  videoHTML.innerHTML = '<video autoplay muted loop poster="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/video-bg.jpg?strip=all&lossy=1&sharp=1&ssl=1"></video>';
 
-gsap.to(".nav-flex", {
-  backgroundColor: "black",
-  duration: 5,
-  scrollTrigger:{
-    start: 'top -10%',
-    end: 'top -12%',
-    trigger: ".logo",
-    scroller: "body",
-    scrub: 0.5
-  }
-});
+  // gsap.to(".cta-h1", {
+  //   top: '-15px',
+  //   duration: 1,
+  //   scrollTrigger:{
+  //     start: '-140% 60%',
+  //     end: '-140% 58%',
+  //     trigger: ".cta",
+  //     scroller: "body",
+  //     scrub: 0.5
+  //   }
+  // });
+
+  // gsap.to("nav", {
+  //   backgroundColor: "black",
+  //   padding: "5px 0px",
+  //   scrollTrigger:{
+  //     start: 'top -3%',
+  //     end: 'top -4%',
+  //     trigger: ".logo",
+  //     scroller: "body",
+  //     scrub: 0.5,
+  //   }
+  // });
+
+}
+else if( bodyWidth <= 1090){
+
+  // gsap.to(".cta-h1", {
+  //   top: '-25px',
+  //   duration: 1,
+  //   scrollTrigger:{
+  //     start: '-140% 60%',
+  //     end: '-140% 58%',
+  //     trigger: ".cta",
+  //     scroller: "body",
+  //     scrub: 0.5
+  //   }
+  // });
+}
+else{
+
+  videoHTML.innerHTML = '<video autoplay muted loop poster="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/video-bg.jpg?strip=all&lossy=1&sharp=1&ssl=1" > <source src="https://sidcupfamilygolf.com/wp-content/uploads/2023/08/SFG-Website-Header-Video-0823.mp4" type="video/mp4"></source></video>';
+
+  gsap.to("nav", {
+    backgroundColor: "black",
+    padding: "10px 0px",
+    scrollTrigger:{
+      start: 'top -3%',
+      end: 'top -4%',
+      trigger: ".logo",
+      scroller: "body",
+      scrub: 0.5,
+    }
+  });
+  
+  gsap.to(".cta-h1", {
+    top: '-45px',
+    duration: 1,
+    scrollTrigger:{
+      start: '-140% 60%',
+      end: '-140% 58%',
+      trigger: ".cta",
+      scroller: "body",
+      scrub: 0.5
+    }
+  });
+}
 
 gsap.to(".logo svg", {
   fill: "white",
   duration: 1,
   scrollTrigger:{
-    start: 'top -10%',
-    end: 'top -12%',
+    start: 'top -3%',
+    end: 'top -4%',
     trigger: ".logo",
     scroller: "body",
     scrub: 0.5
@@ -194,8 +265,8 @@ gsap.to(".rev-img1", {
   left: 25,
   duration: 0.6,
   scrollTrigger:{
-    start: '-70% 60%',
-    end: '-70% 40%',
+    start: '-5% 60%',
+    end: '-5% 30%',
     trigger: ".reviews-container",
     scroller: "body",
     scrub: 2
@@ -206,24 +277,13 @@ gsap.to(".rev-img2", {
   right: 30,
   duration: 1,
   scrollTrigger:{
-    start: '-70% 60%',
-    end: '-70% 40%',
+    start: '-5% 60%',
+    end: '-5% 30%',
     trigger: ".reviews-container",
     scroller: "body",
     scrub: 2
   }
 });
 
-gsap.to(".cta-h1", {
-  top: '-45px',
-  duration: 1,
-  scrollTrigger:{
-    start: '-63% 60%',
-    end: '-63% 58%',
-    trigger: ".cta",
-    scroller: "body",
-    scrub: 0.5
-  }
-});
 
 
