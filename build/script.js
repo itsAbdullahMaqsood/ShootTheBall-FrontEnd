@@ -181,44 +181,44 @@ if( bodyWidth<=560 ){
 
   videoHTML.innerHTML = '<video autoplay muted loop poster="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/video-bg.jpg?strip=all&lossy=1&sharp=1&ssl=1"></video>';
 
-  // gsap.to(".cta-h1", {
-  //   top: '-15px',
-  //   duration: 1,
-  //   scrollTrigger:{
-  //     start: '-140% 60%',
-  //     end: '-140% 58%',
-  //     trigger: ".cta",
-  //     scroller: "body",
-  //     scrub: 0.5
-  //   }
-  // });
+  gsap.to(".cta-h1", {
+    top: '-15px',
+    duration: 1,
+    scrollTrigger:{
+      start: '-140% 60%',
+      end: '-140% 58%',
+      trigger: ".cta",
+      scroller: "body",
+      scrub: 0.5
+    }
+  });
 
-  // gsap.to("nav", {
-  //   backgroundColor: "black",
-  //   padding: "5px 0px",
-  //   scrollTrigger:{
-  //     start: 'top -3%',
-  //     end: 'top -4%',
-  //     trigger: ".logo",
-  //     scroller: "body",
-  //     scrub: 0.5,
-  //   }
-  // });
+  gsap.to("nav", {
+    backgroundColor: "black",
+    padding: "5px 0px",
+    scrollTrigger:{
+      start: 'top -3%',
+      end: 'top -4%',
+      trigger: ".logo",
+      scroller: "body",
+      scrub: 0.5,
+    }
+  });
 
 }
 else if( bodyWidth <= 1090){
 
-  // gsap.to(".cta-h1", {
-  //   top: '-25px',
-  //   duration: 1,
-  //   scrollTrigger:{
-  //     start: '-140% 60%',
-  //     end: '-140% 58%',
-  //     trigger: ".cta",
-  //     scroller: "body",
-  //     scrub: 0.5
-  //   }
-  // });
+  gsap.to(".cta-h1", {
+    top: '-25px',
+    duration: 1,
+    scrollTrigger:{
+      start: '-140% 60%',
+      end: '-140% 58%',
+      trigger: ".cta",
+      scroller: "body",
+      scrub: 0.5
+    }
+  });
 }
 else{
 
