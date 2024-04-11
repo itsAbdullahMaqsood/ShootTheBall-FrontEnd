@@ -306,7 +306,7 @@ main{
 
 .autoscroll-text span{
     
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.4s;
 }
 
@@ -912,7 +912,7 @@ position: relative;
 }
 
 .cta-h1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     -webkit-text-stroke: 1px white;
     font-size: 4rem;
@@ -1266,8 +1266,12 @@ color: white;
     }
 
     .autoscroll-div{
-        font-size: 80px;
+        font-size: 55px;
         margin: 20px 0 50px;
+    }
+
+    .autoscroll-text span{
+        font-family: monospace;
     }
 
     .About-us{
@@ -1318,9 +1322,15 @@ color: white;
     
     .food-container{
         grid-template-columns: 1fr;
-        grid-template-areas: "carousel2"
-                             "text"
+        grid-template-areas: 
+        "carousel2"
+        "text"
         ;
+    }
+
+    .dots-svg2{
+        left: -20px;
+        top: -55px;
     }
 
     .free-scroller .insta{
@@ -1544,7 +1554,7 @@ color: white;
     }
 
     .reviews .swiper-slide{    
-        height:380px;
+        height:430px;
     }
 
     .cta{
@@ -1552,9 +1562,10 @@ color: white;
     }
 
     .cta-h1{
-        font-family: 'Courier New', Courier, monospace;
+        font-family:monospace;
         top: -20px;
         font-size: 1.3rem;
+        
     }
 
     .cta-container{

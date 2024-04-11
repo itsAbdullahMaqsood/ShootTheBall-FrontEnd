@@ -237,7 +237,7 @@ else{
   });
   
   gsap.to(".cta-h1", {
-    top: '-45px',
+    top: '-65px',
     duration: 1,
     scrollTrigger:{
       start: '-140% 60%',
