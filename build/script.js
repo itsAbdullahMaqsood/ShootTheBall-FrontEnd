@@ -14,9 +14,20 @@ let bodyWidth = parseInt(getComputedStyle(body).width);
     },
   });
 
-  if(bodyWidth <= 1090){
+  if(bodyWidth <= 560){
   var swiper2 = new Swiper(".scroller-container .mySwiper", {
     slidesPerView: 2,
+    spaceBetween: 30,
+    freeMode: true,
+    autoplay: true,
+    autoplay:{
+      delay: 1500,
+    },
+  });
+}
+else if(bodyWidth <= 1090){
+  var swiper2 = new Swiper(".scroller-container .mySwiper", {
+    slidesPerView: 4,
     spaceBetween: 30,
     freeMode: true,
     autoplay: true,

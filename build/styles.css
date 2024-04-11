@@ -225,7 +225,7 @@ main{
 }
 
 .hero{
-    height: 100svh;
+    height: 100vh;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -305,7 +305,6 @@ main{
 }
 
 .autoscroll-text span{
-    
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.4s;
 }
@@ -1018,6 +1017,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     gap: 50px;
+    width: 80%;
 }
 
 
@@ -1045,12 +1045,22 @@ footer{
     fill:white;
 }
 
+.line2{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer-links{
     display: flex;
     gap: 30px;
     text-transform: uppercase;
+    text-wrap: nowrap;
     font-size: 1.5rem;
     font-weight: 900;
+    flex: 0.7;
+    justify-content: space-around;
 }
 
 .nav1, .nav2{
@@ -1367,10 +1377,25 @@ footer span:hover{
 
     .footer-top{
         gap: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+    }
+    
+    .socials{
+        flex-direction: column;
+    }
+    
+    .line1{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
     }
     
     .footer-links{
         font-size: 1.2rem;
+        text-wrap: wrap;
+        flex: 1;
     }
 
     .Address{
@@ -1449,7 +1474,7 @@ footer span:hover{
     .arrow-anchor{
         height: 190px;
         width: 190px;
-        inset: auto auto -20px -40px;
+        inset: auto auto 20px -40px;
     }
 
     .arrow-div{
@@ -1466,7 +1491,7 @@ footer span:hover{
     }
 
     .autoscroll-div{
-        font-size: 65px;
+        font-size: 45px;
     }
 
     .About-us-container{
@@ -1549,7 +1574,7 @@ footer span:hover{
     }
 
     .reviews .swiper-slide{    
-        height:430px;
+        height: 430px;
     }
 
     .cta{
@@ -1578,21 +1603,10 @@ footer span:hover{
         left: 0;
         bottom: 15px;
         width: 200px;
-    }
+    } 
 
     .footer-top{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .line1{
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .socials{
-        flex-direction: column;
+        width: auto;
     }
 
 }
