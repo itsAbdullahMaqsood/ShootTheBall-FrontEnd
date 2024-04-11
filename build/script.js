@@ -203,8 +203,6 @@ gsap.to((".background-video-overlay"), {
 
 if( bodyWidth<=560 ){
 
-  videoHTML.innerHTML = '<video autoplay muted loop poster="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/video-bg.jpg?strip=all&lossy=1&sharp=1&ssl=1"></video>';
-
   gsap.to(".cta-h1", {
     top: '-15px',
     duration: 1,
@@ -246,7 +244,6 @@ else if( bodyWidth <= 1090){
 }
 else{
 
-  videoHTML.innerHTML = '<video autoplay muted loop poster="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/video-bg.jpg?strip=all&lossy=1&sharp=1&ssl=1" > <source src="https://sidcupfamilygolf.com/wp-content/uploads/2023/08/SFG-Website-Header-Video-0823.mp4" type="video/mp4"></source></video>';
 
   gsap.to("nav", {
     backgroundColor: "black",
