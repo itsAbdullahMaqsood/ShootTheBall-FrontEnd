@@ -1,4 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
+
+let body = document.querySelector("body");
+let bodyWidth = parseInt(getComputedStyle(body).width);
  
  var swiper = new Swiper(".carousel .mySwiper", {
     spaceBetween: 30,
@@ -11,6 +14,18 @@ gsap.registerPlugin(ScrollTrigger);
     },
   });
 
+  if(bodyWidth <= 1090){
+  var swiper2 = new Swiper(".scroller-container .mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    freeMode: true,
+    autoplay: true,
+    autoplay:{
+      delay: 1500,
+    },
+  });
+}
+else{
   var swiper2 = new Swiper(".scroller-container .mySwiper", {
     slidesPerView: 5,
     spaceBetween: 30,
@@ -26,6 +41,7 @@ gsap.registerPlugin(ScrollTrigger);
     momentumRatio: 5.5,
     }
   });
+}
 
   var swiper = new Swiper(".reviews .mySwiper", {
     spaceBetween: 30,
@@ -39,7 +55,6 @@ gsap.registerPlugin(ScrollTrigger);
 
   let glow = document.querySelector(".mouse-glow");
   let dot = document.querySelector(".mouse-dot");
-  let body = document.querySelector("body");
 
   let glowBounds = glow.getBoundingClientRect();
   let dotBounds = dot.getBoundingClientRect();
@@ -49,8 +64,6 @@ gsap.registerPlugin(ScrollTrigger);
 
   let dotcenterX = dotBounds.width/2;
   let dotcenterY = dotBounds.height/2;
-
-  let bodyWidth = parseInt(getComputedStyle(body).width);
 
   window.addEventListener("mousemove", (details) => {
     bodyWidth = parseInt(getComputedStyle(body).width)
