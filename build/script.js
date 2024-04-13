@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 let body = document.querySelector("body");
 let bodyWidth = parseInt(getComputedStyle(body).width);
  
@@ -130,12 +128,12 @@ else{
   const ctaButton3 = document.querySelector('.cta-button:nth-child(3)');
   const socialIcons1 = document.querySelector('.social-icons:nth-child(1)');
   const socialIcons2 = document.querySelector('.social-icons:nth-child(2)');
-  const footerlink1 = document.querySelector('.nav1 div:nth-child(1)');
-  const footerlink2 = document.querySelector('.nav1 div:nth-child(2)');
-  const footerlink3 = document.querySelector('.nav1 div:nth-child(3)');
-  const footerlink4 = document.querySelector('.nav1 div:nth-child(4)');
-  const footerlink5 = document.querySelector('.nav2 div:nth-child(1)');
-  const footerlink6 = document.querySelector('.nav2 div:nth-child(2)');
+  const footerlink1 = document.querySelector('.nav1 a:nth-child(1)');
+  const footerlink2 = document.querySelector('.nav1 a:nth-child(2)');
+  const footerlink3 = document.querySelector('.nav1 a:nth-child(3)');
+  const footerlink4 = document.querySelector('.nav1 a:nth-child(4)');
+  const footerlink5 = document.querySelector('.nav2 a:nth-child(1)');
+  const footerlink6 = document.querySelector('.nav2 a:nth-child(2)');
   const address = document.querySelector('.Address span');
   const direction = document.querySelector('.Directions');
   const copywriteLink1 = document.querySelector('.copywrite-links span:nth-child(1)');
