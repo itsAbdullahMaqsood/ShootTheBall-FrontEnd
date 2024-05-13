@@ -15,9 +15,9 @@ This website showcases my front-end skills, developed using HTML5, CSS, and Java
 <h2 align="center"> Desktop Layout of My Website </h2>
 <img src="pics/Desktop view.png">
 
+<br><br><br>
 
-
-<h2> Mobile Layout of My Website </h2>
+<h2 align="center"> Mobile Layout of My Website </h2>
 <img src="pics/Mobile view.png">
 
 ## Author
