@@ -8,9 +8,10 @@ This website showcases my front-end skills, developed using HTML5, CSS, and Java
 ## Built with
 
 - Semantic HTML5 markup, CSS & Javascript 
+- [GSAP by Greensock](gsap.com) - For amazing animations like timed-state and scroll-triggers.
+- [Tilt.js](https://micku7zu.github.io/vanilla-tilt.js/) - For tracking the mouse and tilting the cards to face it.
+- [Swiper.js](swiperjs.com) - For the automatic sliding carousel
 - Mobile-first workflow
-- Tilt.js - For tracking the mouse and tilting the cards to face it.
-- Swiper.js - For the automatic sliding carousel
 
 <h2 align="center"> Desktop Layout of My Website </h2>
 <img src="pics/Desktop view.png">
@@ -26,5 +27,7 @@ This website showcases my front-end skills, developed using HTML5, CSS, and Java
 
 - My Linkedin - [@AbdullahMaqsood](https://www.linkedin.com/in/abdullahmaqsood321)
 
-- SidCupFamilyGolf - [@SidCupFamilyGolf0](SidCupFamilyGolf.com)
+## Original site
+
+- SidCupFamilyGolf - [@SidCupFamilyGolf](SidCupFamilyGolf.com)
 
