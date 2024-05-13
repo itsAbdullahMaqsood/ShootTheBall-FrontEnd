@@ -1,6 +1,6 @@
 # Shoot-The-Ball Range - A Front-End Clone of SidcupFamilyGolf
 
-This is a Website I made using HTML5, CSS, and Javascript as a testament of my Front-End skills. I've used a popular Javascript Libraries called GSAP by Greensock for some amazing animations. I've also used tilt.js and swiper.js for tilt-effect on cards and automatic carousels respectively. The layout of the website is a clone of SidCupFamilyGolf.com. The idea behind it was to test and improve my coding skills by building a realistic projects for an actual business. 
+This website showcases my front-end skills, developed using HTML5, CSS, and Javascript. I've utilized GSAP, a popular JavaScript library by Greensock, for captivating animations. Additionally, tilt.js and swiper.js were employed for tilt effects on cards and automatic carousels, respectively. The website layout is inspired by SidCupFamilyGolf.com. The project aimed to enhance my coding abilities by creating a realistic project for a genuine business.
 
 ## Links
 
